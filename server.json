@@ -11,7 +11,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://estroni-mcp.workers.dev/mcp"
+      "url": "https://estroni-mcp.johnnytwohill.workers.dev/mcp"
     }
   ]
 }

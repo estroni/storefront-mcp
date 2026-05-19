@@ -9,7 +9,7 @@ Lets AI agents (Claude, ChatGPT, Cursor, Copilot, etc.) search the catalogue, fe
 
 - **Registry name:** `io.github.estroni/storefront`
 - **Transport:** Streamable HTTP (MCP protocol `2025-06-18`)
-- **Endpoint:** `https://estroni-mcp.workers.dev/mcp`
+- **Endpoint:** `https://estroni-mcp.johnnytwohill.workers.dev/mcp` (custom domain `mcp.estroni.com.au` planned)
 - **Runtime:** Cloudflare Workers
 - **Source:** [github.com/estroni/storefront-mcp](https://github.com/estroni/storefront-mcp)
 
@@ -38,7 +38,7 @@ Add to your MCP config (`~/Library/Application Support/Claude/claude_desktop_con
 {
   "mcpServers": {
     "estroni-storefront": {
-      "url": "https://estroni-mcp.workers.dev/mcp"
+      "url": "https://estroni-mcp.johnnytwohill.workers.dev/mcp"
     }
   }
 }
@@ -48,23 +48,23 @@ Restart the client. The four tools appear under the `estroni-storefront` server.
 
 ### ChatGPT / Anthropic Claude.ai (Custom Connectors)
 
-Settings → Connectors → Add custom connector → paste `https://estroni-mcp.workers.dev/mcp`.
+Settings → Connectors → Add custom connector → paste `https://estroni-mcp.johnnytwohill.workers.dev/mcp`.
 
 ### Test from a terminal
 
 ```bash
 # initialize
-curl -sS https://estroni-mcp.workers.dev/mcp \
+curl -sS https://estroni-mcp.johnnytwohill.workers.dev/mcp \
   -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"curl","version":"1.0"}}}'
 
 # list tools
-curl -sS https://estroni-mcp.workers.dev/mcp \
+curl -sS https://estroni-mcp.johnnytwohill.workers.dev/mcp \
   -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":2,"method":"tools/list"}'
 
 # call search_products
-curl -sS https://estroni-mcp.workers.dev/mcp \
+curl -sS https://estroni-mcp.johnnytwohill.workers.dev/mcp \
   -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"search_products","arguments":{"query":"merino"}}}'
 ```
