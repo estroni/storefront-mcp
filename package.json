@@ -1,0 +1,41 @@
+{
+  "name": "@estroni/storefront-mcp",
+  "version": "1.0.0",
+  "description": "Read-only MCP server for the Estroni storefront — search products, get product detail, list collections, get policies. Deployable on Cloudflare Workers (Streamable HTTP transport).",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "author": "Estroni (founder@boolsai.ai)",
+  "homepage": "https://github.com/estroni/storefront-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estroni/storefront-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/estroni/storefront-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "estroni",
+    "shopify",
+    "storefront",
+    "ecommerce",
+    "merino",
+    "activewear",
+    "low-tox",
+    "australian",
+    "catalog",
+    "cloudflare-workers"
+  ],
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240725.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^4.59.0"
+  }
+}

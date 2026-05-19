@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.estroni/storefront",
+  "title": "Estroni Storefront",
+  "description": "Read-only MCP server for the Estroni storefront (https://estroni.com.au) — Australian merino & low-tox women's activewear. Exposes search_products, get_product, list_collections, and get_policies tools over Shopify's public predictive-search and product-JSON endpoints. Returns title, price (AUD), variants, availability, images, descriptions, and storefront URLs. Checkouts remain human-only by Estroni policy; end-to-end \"buy-for-me\" agents are not permitted.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/estroni/storefront-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://estroni-mcp.workers.dev/mcp"
+    }
+  ]
+}
