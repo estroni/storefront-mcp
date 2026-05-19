@@ -1,12 +1,19 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "estroni-mcp",
+  "account_id": "ca3017533c62874dd946fc7d59ad1a7a",
   "main": "src/index.ts",
   "compatibility_date": "2024-10-22",
   "workers_dev": true,
   "observability": {
     "enabled": true
   },
+  "routes": [
+    {
+      "pattern": "mcp.estroni.com.au",
+      "custom_domain": true
+    }
+  ],
   "vars": {
     "STOREFRONT_ORIGIN": "https://estroni.com.au",
     "SERVER_NAME": "io.github.estroni/storefront",

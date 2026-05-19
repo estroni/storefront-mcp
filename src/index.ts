@@ -327,7 +327,7 @@ function landingPage(env: Env) {
 <pre>{
   "mcpServers": {
     "estroni-storefront": {
-      "url": "https://estroni-mcp.johnnytwohill.workers.dev/mcp"
+      "url": "https://mcp.estroni.com.au/mcp"
     }
   }
 }</pre>
